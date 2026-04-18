@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>.....</title>
+
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    font-family: Arial, sans-serif;
+    color: white;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  button {
+    padding: 18px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 12px;
+    background: white;
+    color: black;
+    cursor: pointer;
+  }
+
+  button:active {
+    transform: scale(0.95);
+  }
+
+  audio {
+    width: 250px;
+  }
+</style>
+</head>
+
+<body>
+
+<!-- AUDIO ABOVE BUTTON -->
+<audio controls>
+  <source src="audio.mp3" type="audio/mpeg">
+  Your browser does not support audio.
+</audio>
+
+<button onclick="openPUBG()">game sok ml ha</button>
+
+<script>
+function openPUBG() {
+  const intentLink = "intent://#Intent;scheme=pubgmobile;package=com.tencent.ig;end";
+
+  window.location.href = intentLink;
+
+  setTimeout(() => {
+    window.location.href =
+      "https://play.google.com/store/apps/details?id=com.tencent.ig";
+  }, 1500);
+}
+</script>
+
+</body>
+</html>
